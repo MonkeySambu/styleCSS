@@ -1,0 +1,344 @@
+/*FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.courier-prime-bold {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.courier-prime-regular-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.courier-prime-bold-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+/*COLORI*/
+:root{
+    --brillante: #BFFF00;
+    --pastello: #06D001;
+    --scuro: #339933;
+    --neon: #0b2f0b;
+
+    /*Rossi*/
+    
+}
+
+/*LOADER*/
+.overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background: rgba(37, 37, 37, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Assicura che sia sopra tutto */
+  }
+  
+  .loader {
+    width: 10em;
+    height: 3em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .line {
+    width: 1em;
+    height: 1em;
+    background-color: var(--pastello); /* Bianco per maggiore contrasto */
+    outline: 3px solid seashell; /* Nero */
+    border-radius: 1em;
+    animation: a 2s infinite;
+  }
+  
+  .l1 { animation-delay: 0.4s; }
+  .l2 { animation-delay: 0.8s; }
+  .l3 { animation-delay: 1.2s; }
+  .l4 { animation-delay: 1.6s; }
+  .l5 { animation-delay: 2s; }
+  
+  @keyframes a {
+    0% { height: 1em; }
+    50% { height: 3em; transform: translateY(-30%); }
+    100% { height: 1em; }
+  }
+  
+/*HTML*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier Prime", monospace;
+}
+
+body{
+    color: lime;
+    font-weight: 400;
+    font-style: normal;
+    background-color: black;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--brillante);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.glow{
+    -webkit-box-shadow:0px 0px 135px 25px rgba(85,255,85,0.81);
+    -moz-box-shadow: 0px 0px 135px 25px rgba(85,255,85,0.81);
+    box-shadow: 0px 0px 135px 25px rgba(85,255,85,0.81);
+}
+
+.glow-text{
+    text-shadow: 0px 0px 10px rgba(85,255,85,0.81);
+}
+
+.radius{
+    border-radius: 25px;
+}
+
+.gradient{
+    background: #bfff00;
+    background: linear-gradient(140deg,#bfff00 0%, #55ff55 80%);
+    background: -webkit-linear-gradient(140deg,#bfff00 0%, #55ff55 80%);
+    background: -moz-linear-gradient(140deg,#bfff00 0%, #55ff55 80%);
+}
+
+
+/*FORM*/
+/* Stacked Layout (default) */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group.stacked label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group.stacked input,
+.form-group.stacked textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--neon);
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+/* Inline Layout */
+.form-group.inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group.inline label {
+    width: 100px; /* Adjust width as needed */
+    margin-bottom: 0;
+}
+
+.form-group.inline input,
+.form-group.inline textarea {
+    border: 1px solid var(--neon);
+    border-radius: 8px;
+    width: calc(100% - 110px); /* Adjust width to fit with label */
+}
+
+/* mie modifiche */
+.form-layout {
+    background-color: rgba(37, 37, 37, 0.4);
+}
+
+form{
+    border-image: radial-gradient(circle at center, #06d001 0%, #55ff55 100%);
+    border-image-slice: 1; /* Ensures the gradient is applied to the entire border */
+}
+
+label{
+    color: lime;
+    font-size: 1em;
+}
+
+input{
+    width: 100%;
+    background: linear-gradient(140deg,#bfff00 0%, #55ff55 80%);
+    font-size: 1em;
+    color: black;
+    margin: 0;
+    padding: 11px 25px;
+    line-height: 1;
+    border: 1px solid var(--neon);
+    border-radius: 8px;
+}
+
+input::placeholder {
+    color: black;
+}
+
+input[type="submit"],input[type="reset"],input[type="button"]{
+    background: #bfff00;
+    background: linear-gradient(140deg,#bfff00 0%, #55ff55 80%);
+    background: -webkit-linear-gradient(140deg,#bfff00 0%, #55ff55 80%);
+    background: -moz-linear-gradient(140deg,#bfff00 0%, #55ff55 80%);
+    color: black;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(140deg,#bfff00 0%, #55ff55 80%);
+    color: black;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+/*TABLE*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid var(--neon);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th{
+    background-color: limegreen;
+    color: black;
+}
+
+tr:nth-child(even){
+    background-color: var(--neon);
+}
+
+
+/*RESPONSIVITY*/
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    main {
+        width: 90%;
+    }
+}
+/* Responsive Table */
+.table-container {
+    overflow-x: auto; /* Enables horizontal scroll on small screens */
+}
+
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+/*Stack table*/
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        display: none; /* Hide table headers */
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        content: attr(data-label); /* Use `data-label` to show header */
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+/* Responsive Form */
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .form-group.inline {
+        flex-direction: column; /* Stack label and input on small screens */
+        align-items: flex-start;
+    }
+
+    .form-group.inline label,
+    .form-group.inline input,
+    .form-group.inline textarea {
+        width: 100%; /* Full width on mobile */
+    }
+
+    button {
+        font-size: 1.1em;
+    }
+}
+
+
+
