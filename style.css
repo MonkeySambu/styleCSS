@@ -27,13 +27,19 @@
 }
 /*COLORI*/
 :root{
+
     --brillante: #BFFF00;
     --pastello: #06D001;
     --scuro: #339933;
     --neon: #0b2f0b;
 
     /*Rossi*/
-    
+    --red-brillante: #D84040;
+    --red-pastello: #C7253E;
+    --red-scuro: #8E1616;
+    --red-neon: #5D0E41;
+
+
 }
 
 /*LOADER*/
@@ -62,8 +68,8 @@
   .line {
     width: 1em;
     height: 1em;
-    background-color: var(--pastello); /* Bianco per maggiore contrasto */
-    outline: 3px solid seashell; /* Nero */
+    background-color: var(--pastello); /* Verde come il tema */
+    outline: 3px solid seashell; /* Faccio Contrasto */
     border-radius: 1em;
     animation: a 2s infinite;
   }
@@ -79,7 +85,8 @@
     50% { height: 3em; transform: translateY(-30%); }
     100% { height: 1em; }
   }
-  
+
+
 /*HTML*/
 * {
     margin: 0;
@@ -200,12 +207,32 @@ input::placeholder {
     color: black;
 }
 
-input[type="submit"],input[type="reset"],input[type="button"]{
+input[type="submit"],input[type="button"]{
     background: #bfff00;
     background: linear-gradient(140deg,#bfff00 0%, #55ff55 80%);
     background: -webkit-linear-gradient(140deg,#bfff00 0%, #55ff55 80%);
     background: -moz-linear-gradient(140deg,#bfff00 0%, #55ff55 80%);
     color: black;
+}
+
+input[type="submit"]:hover,input[type="button"]:hover{
+    border-color: #45a049;
+    color:#45a049;
+    background-color: transparent;    
+}
+
+input[type="reset"]{
+    border-color: var(--red-pastello);
+    color:var(--red-pastello) ;
+    background-color: transparent;
+}
+
+input[type="reset"]:hover{
+    background: #FF204E;
+    background: linear-gradient(140deg,#FF204E 0%, #C70039 80%);
+    background: -webkit-linear-gradient(140deg,#FF204E 0%, #C70039 80%);
+    background: -moz-linear-gradient(140deg,#FF204E 0%, #C70039 80%);
+    color: whitesmoke;
 }
 
 /* Button Styling */
@@ -222,7 +249,9 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    border-color: #45a049;
+    color:#45a049;
+    background-color: transparent;
 }
 
 .form-container {
