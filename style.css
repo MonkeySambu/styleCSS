@@ -217,13 +217,18 @@ input[type="submit"],input[type="button"]{
 
 input[type="submit"]:hover,input[type="button"]:hover{
     border-color: #45a049;
+    background-image: none;
     color:#45a049;
     background-color: transparent;    
+    font-weight: bold;
 }
 
 input[type="reset"]{
+
     border-color: var(--red-pastello);
-    color:var(--red-pastello) ;
+    color:var(--red-pastello);
+    background-image: none;
+    font-weight: bold;
     background-color: transparent;
 }
 
