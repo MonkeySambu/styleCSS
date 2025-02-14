@@ -293,6 +293,7 @@ input[type="reset"]:hover{
 .custom-select select:hover,
 .custom-select select:focus {
     border-color: #06d001;
+    color: var(--pastello);
     background-color: transparent;
     outline: none;
 }
@@ -300,7 +301,7 @@ input[type="reset"]:hover{
 /* Stile delle opzioni */
 .custom-select select option {
     background-color: #bfff00;
-    color: var(--pastello);
+    color: black;
     padding: 10px;
 }
 
