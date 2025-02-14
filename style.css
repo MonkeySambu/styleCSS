@@ -265,6 +265,8 @@ input[type="reset"]:hover{
 /* Stile del select */
 .custom-select {
     position: relative;
+    font-size: 1em;
+    padding: 11px 25px;
 }
 
 .custom-select select {
@@ -277,6 +279,8 @@ input[type="reset"]:hover{
     border-radius: 5px;
     background: #bfff00;
     color: black;
+    font-size: 1em;
+    padding: 11px 25px;
 }
 
 /* Aggiunge una freccia personalizzata */
@@ -302,6 +306,7 @@ input[type="reset"]:hover{
 
 /* Stile delle opzioni */
 .custom-select select option,.custom-select select option:checked{
+    font-size: 1em;
     background-color: #bfff00;
     color: black;
     padding: 10px;
@@ -311,9 +316,10 @@ input[type="reset"]:hover{
 .select-items div{
     color: var(--brillante);
     background-color: black;
-    padding: 8px 16px;
+    font-size: 1em;
+    padding: 11px 25px;
     border: 1px solid transparent;
-    border-color: transparent transparent var(--pastello) transparent;
+    border-color: var(--pastello) transparent;
     cursor: pointer;
   }
 
