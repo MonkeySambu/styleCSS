@@ -265,14 +265,18 @@ input[type="reset"]:hover{
 /* Stile del select */
 .custom-select {
     position: relative;
-
-    border-radius: 5px;
-    background: #bfff00;
-    color: black;
 }
 
 .custom-select select {
     display: none; /* Nascondi il menu a discesa predefinito */
+}
+
+
+
+.select-selected{
+    border-radius: 5px;
+    background: #bfff00;
+    color: black;
 }
 
 /* Aggiunge una freccia personalizzata */
@@ -297,7 +301,7 @@ input[type="reset"]:hover{
 }
 
 /* Stile delle opzioni */
-.custom-select select option {
+.custom-select select option,.custom-select select option:checked{
     background-color: #bfff00;
     color: black;
     padding: 10px;
