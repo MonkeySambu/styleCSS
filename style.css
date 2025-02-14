@@ -262,6 +262,54 @@ input[type="reset"]:hover{
     color: whitesmoke;
 }
 
+/* Stile del select */
+.custom-select select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid ;
+    border-radius: 5px;
+    background: #bfff00;
+    color: black;
+    cursor: pointer;
+    appearance: none; /* Nasconde lo stile predefinito */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Aggiunge una freccia personalizzata */
+.custom-select::after {
+    content: '▼';
+    font-size: 14px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Effetto hover e focus */
+.custom-select select:hover,
+.custom-select select:focus {
+    border-color: #06d001;
+    background-color: transparent;
+    outline: none;
+}
+
+/* Stile delle opzioni */
+.custom-select select option {
+    background-color: #bfff00;
+    color: var(--pastello);
+    padding: 10px;
+}
+
+/* Cambia colore delle opzioni selezionate */
+.custom-select select option:checked {
+    background: #bfff00;
+    color: black;
+}
+
 /* Button Styling */
 button {
     width: 100%;
