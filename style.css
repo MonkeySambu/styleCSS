@@ -263,18 +263,16 @@ input[type="reset"]:hover{
 }
 
 /* Stile del select */
-.custom-select select {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 2px solid ;
+.custom-select {
+    position: relative;
+
     border-radius: 5px;
     background: #bfff00;
     color: black;
-    cursor: pointer;
-    appearance: none; /* Nasconde lo stile predefinito */
-    -webkit-appearance: none;
-    -moz-appearance: none;
+}
+
+.custom-select select {
+    display: none; /* Nascondi il menu a discesa predefinito */
 }
 
 /* Aggiunge una freccia personalizzata */
@@ -305,10 +303,31 @@ input[type="reset"]:hover{
     padding: 10px;
 }
 
+/* style the items (options), including the selected item: */
+.select-items div{
+    color: var(--brillante);
+    background-color: black;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent var(--pastello) transparent;
+    cursor: pointer;
+  }
+
+  .select-selected{
+    background-color: #bfff00;
+    color: black;
+  }
+
 /* Cambia colore delle opzioni selezionate */
-.custom-select select option:checked {
+.select-items{
+    position: absolute;
     background: #bfff00;
     color: black;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border: 1px solid var(--neon);
 }
 
 /* Button Styling */
