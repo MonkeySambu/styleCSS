@@ -114,7 +114,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    max-height: 100vh;
     flex-direction: column;
     gap: 50px;
 }
@@ -123,7 +123,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    max-height: 100vh;
     flex-direction: column;
 }
 
@@ -131,8 +131,12 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
+    max-height: 100vh;
+    flex-direction: row;
+}
+
+.half-perc{
+    width: 50%;
 }
 
 .glow{
