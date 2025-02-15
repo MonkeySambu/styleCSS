@@ -437,6 +437,7 @@ tr:nth-child(even){
         width: 90%;
     }
 }
+
 /* Responsive Table */
 .table-container {
     overflow-x: auto; /* Enables horizontal scroll on small screens */
@@ -477,10 +478,7 @@ tr:nth-child(even){
 @media (max-width: 768px) {
     .form-container {
         padding: 15px;
-    }
-
-    h2 {
-        font-size: 1.5em;
+        width: 100%;
     }
 
     .form-group.inline {
@@ -496,6 +494,25 @@ tr:nth-child(even){
 
     button {
         font-size: 1.1em;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .form-group.inline label,
+    .form-group.inline input,
+    .form-group.inline textarea {
+        width: 100%; /* Full width on mobile */
+    }
+
+    button {
+        font-size: 1em;
+        width: 100%;
     }
 }
 
