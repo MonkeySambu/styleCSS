@@ -230,7 +230,7 @@ form{
 
 label{
     color: lime;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 input{
@@ -427,9 +427,14 @@ tr:nth-child(even){
 /*RESPONSIVITY*/
 
 @media screen and (max-width: 768px) {
+    html{
+        font-size: 2.5em;
+    }
     main {
         width: 80%;
     }
+
+
 }
 
 @media screen and (max-width: 576px) {
