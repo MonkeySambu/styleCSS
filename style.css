@@ -94,6 +94,9 @@
     box-sizing: border-box;
     font-family: "Courier Prime", monospace;
 }
+header{
+    margin-bottom: 50px;
+}
 
 body{
     color: lime;
@@ -104,6 +107,15 @@ body{
 
 h1,h2,h3,h4,h5,h6{
     color: var(--brillante);
+}
+
+h1{
+    margin-bottom: 5px;
+}
+
+hr{
+    color:var(--scuro);
+    margin-bottom: 5px;
 }
 
 .error{
@@ -429,13 +441,21 @@ tr:nth-child(even){
 @media screen and (max-width: 768px) {
     html{
         font-size: 2.5em;
+        word-wrap: anywhere;
+
+
     }
     main {
         width: 80%;
+	    transform: translateX(6%);
     }
 
-
+    h1{
+        margin-bottom: 5px;
+        margin-left: 0.5rem;
+    }
 }
+
 
 @media screen and (max-width: 576px) {
     main {
