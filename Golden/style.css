@@ -1,0 +1,322 @@
+:root {
+    --oro: #d4af37;
+    --nero: #000000;
+    --grigio: #f2f2f2;
+    --bianco: #ffffff;
+  }
+  
+  /* RESET BASE */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--grigio);
+    color: var(--nero);
+    padding: 40px;
+  }
+  
+  /* ========== NAVBAR ========== */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nero);
+    padding: 15px 30px;
+    color: var(--oro);
+    flex-wrap: wrap;
+  }
+  
+  .navbar h1 {
+    font-size: 24px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .navbar ul li a {
+    color: var(--oro);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar ul li a:hover {
+    color: var(--grigio);
+  }
+  
+  /* ========== IMMAGINI ========== */
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--nero);
+    border-radius: 8px;
+  }
+  
+  /* ========== TABELLE ========== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: var(--bianco);
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  
+  th, td {
+    border: 1px solid var(--nero);
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: var(--nero);
+    color: var(--oro);
+  }
+  
+  tr:nth-child(even) {
+    background-color: var(--grigio);
+  }
+  
+  /* ========== FORM (stacked) ========== */
+  form {
+    background-color: var(--bianco);
+    padding: 20px;
+    border: 1px solid var(--nero);
+    border-radius: 6px;
+    max-width: 700px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input,
+  select,
+  textarea,
+  button {
+    padding: 10px;
+    border: 1px solid var(--nero);
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--grigio);
+  }
+  
+  /* Textarea */
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  /* Select dropdown */
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,0 10,0 5,5' fill='%23000'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 5px;
+    padding-right: 30px;
+  }
+  
+  /* Button */
+  button {
+    background-color: var(--oro);
+    color: var(--nero);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--nero);
+    color: var(--oro);
+  }
+  
+  /* ========== FORM INLINE ========== */
+  .form-inline {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid var(--nero);
+    border-radius: 6px;
+    background-color: var(--bianco-grigio);
+    max-width: 600px;
+    margin: auto;
+    flex-direction: row;
+  }
+  
+  .form-inline label {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  .form-inline input,
+  .form-inline select {
+    flex: 1;
+    min-width: 160px;
+  }
+  
+  .form-inline button {
+    padding: 10px 20px;
+    background-color: var(--oro);
+    border: 1px solid var(--nero);
+    color: var(--nero);
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .form-inline button:hover {
+    background-color: #d4af37;
+  }
+  
+  
+  
+  /* ========== BARRA DI CARICAMENTO ========== */
+  .loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* sfondo semitrasparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .progress-container {
+    width: 60%;
+    height: 25px;
+    background-color: var(--bianco-grigio);
+    border: 2px solid var(--nero);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--oro);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  
+  @keyframes load {
+    0% { width: 0%; }
+    25% { width: 40%; }
+    50% { width: 60%; }
+    75% { width: 80%; }
+    100% { width: 100%; }
+  }
+
+  /* ========== ALERT ========== */
+    .alert {
+        padding: 20px;
+        background-color: var(--nero);
+        color: var(--oro);
+        border-radius: 5px;
+        margin: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+  
+    .alert button {
+        background-color: transparent;
+        border: none;
+        color: var(--oro);
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .alert button:hover {
+        color: var(--grigio);
+    }
+
+    /* ========== SEPARATOR ========== */
+    hr{
+        border: none;
+        height: 3px;
+        background: linear-gradient(to right, var(--nero), var(--oro), var(--nero));
+        margin: 40px 0;
+        border-radius: 5px;
+      }
+      
+  /* ========== LOADER ========== */
+  /* .loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid var(--nero);
+    border-top: 6px solid var(--oro);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  } */
+  
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .form-inline {
+        flex-direction: column;
+        align-items: stretch;
+    }
+  
+    input,
+    select,
+    textarea,
+    button {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .form-inline {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .form-inline input,
+    .form-inline select,
+    .form-inline button {
+      width: 100%;
+    }
+  }
+  
