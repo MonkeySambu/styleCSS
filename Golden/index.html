@@ -136,7 +136,20 @@
     </table>
   </section>
 
+<!-- Pulsante per mostrare l'alert -->
+<button type="button" onclick="showAlert('Operazione completata con successo!')" style="margin: 20px 0;">
+  Mostra Alert
+</button>
 
+<!-- Test Datetime Local -->
+<section class="form-section">
+  <h2>Test Datetime Local</h2>
+  <form>
+    <label for="appuntamento">Scegli data e ora:</label>
+    <input type="datetime-local" id="appuntamento" name="appuntamento">
+    <button type="submit">Invia</button>
+  </form>
+</section>
 
 <h2 class="text-gradient">Titolo con gradiente oro-nero</h2>
 <!-- Select con barra di ricerca -->
@@ -176,10 +189,7 @@
   <button onclick="closeAlert()" aria-label="Chiudi">&times;</button>
 </div>
 
-<!-- Pulsante per mostrare l'alert -->
-<button type="button" onclick="showAlert('Operazione completata con successo!')" style="margin: 20px 0;">
-  Mostra Alert
-</button>
+
 
 <script>
   const input = document.getElementById('searchable-select-input');

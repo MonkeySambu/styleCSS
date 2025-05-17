@@ -1,5 +1,6 @@
 :root {
     --oro: #d4af37;
+    --bianco-oro: #ffcd83;
     --nero: #000000;
     --grigio: #f2f2f2;
     --bianco: #ffffff;
@@ -50,7 +51,17 @@
   
   .navbar ul li a:hover {
     color: var(--grigio);
+    
   }
+  
+  .navbar ul li a.active,
+.navbar ul li.active > a {
+  color: var(--nero);
+  background: var(--oro);
+  border-radius: 4px;
+  padding: 6px 12px;
+  transition: background 0.3s, color 0.3s;
+}
   
   /* ========== IMMAGINI ========== */
   img {
@@ -506,4 +517,28 @@
 .btn-table:hover {
   background: var(--nero);
   color: var(--oro);
+}
+
+/* Migliora feedback su mobile per bottoni e navbar */
+.btn-table:hover,
+.btn-table:active,
+.btn-table:focus {
+  background: var(--nero);
+  color: var(--oro);
+  outline: none;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:active,
+.navbar ul li a:focus {
+  color: var(--grigio);
+  background: var(--oro);
+  outline: none;
+}
+
+.form-section input[type="datetime-local"] {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    pointer-events: auto;
 }
