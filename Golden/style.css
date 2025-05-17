@@ -356,7 +356,7 @@
   }
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     table, thead, tbody, th, td, tr {
         display: block;
         width: 100%;
@@ -405,7 +405,6 @@
         min-height: 2.5em;
         box-sizing: border-box;
         background: inherit;
-        word-break: break-word;
         color: var(--nero);
     }
     td:before {
