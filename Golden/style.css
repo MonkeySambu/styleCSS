@@ -5,6 +5,9 @@
     --grigio: #f2f2f2;
     --bianco: #ffffff;
   }
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+  
   
   /* RESET BASE */
   * {
@@ -14,7 +17,7 @@
   }
   
   body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Quicksand", sans-serif;
     background-color: var(--grigio);
     color: var(--nero);
     padding: 40px;
@@ -55,7 +58,7 @@
   }
   
   .navbar ul li a.active,
-.navbar ul li.active > a {
+  .navbar ul li.active > a {
   color: var(--nero);
   background: var(--oro);
   border-radius: 4px;
