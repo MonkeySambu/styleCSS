@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Demo UI Oro Nero Bianco</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -93,28 +93,12 @@
 
   <!-- PROGRESS BAR -->
 <!-- Loader con barra di caricamento -->
-<div class="loader-overlay" id="loader-barra">
-    <div class="progress-container">
-      <div class="progress-bar" id="progress-bar"></div>
-    </div>
-  </div>
-  
+<div class="loader"></div>
 
-  <script>
-    let progress = 0;
-    const bar = document.getElementById('progress-bar');
-    const overlay = document.getElementById('loader-barra');
-  
-    const simulateLoading = setInterval(() => {
-      if (progress >= 100) {
-        clearInterval(simulateLoading);
-        overlay.style.display = 'none';
-      } else {
-        progress += 2;
-        bar.style.width = progress + '%';
-      }
-    }, 50); // aumenta la larghezza ogni 50ms
-  </script>
+<!-- Sovrapposizione loader -->
+<div class="loader-overlay">
+  <div class="loader"></div>
+</div>
   
 </body>
 </html>
