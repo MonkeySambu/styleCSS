@@ -64,32 +64,99 @@
   
   
   <hr>
-
-  <!-- TABELLA -->
+  <!-- TABELLA 10 COLONNE -->
   <section>
-    <h2>Tabella</h2>
+    <h2>Tabella 10 colonne</h2>
     <table>
       <thead>
         <tr>
+          <th>ID</th>
           <th>Nome</th>
+          <th>Cognome</th>
           <th>Email</th>
           <th>Ruolo</th>
+          <th>Telefono</th>
+          <th>Città</th>
+          <th>Stato</th>
+          <th>Registrato</th>
+          <th>Status</th>
+          <th>Azioni</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Alice Rossi</td>
-          <td>alice@example.com</td>
-          <td>Admin</td>
+          <td data-label="ID">1</td>
+          <td data-label="Nome">Alice</td>
+          <td data-label="Cognome">Rossi</td>
+          <td data-label="Email">alice@example.com</td>
+          <td data-label="Ruolo">Admin</td>
+          <td data-label="Telefono">3331234567</td>
+          <td data-label="Città">Milano</td>
+          <td data-label="Stato">Italia</td>
+          <td data-label="Registrato">2024-01-10</td>
+          <td data-label="Status">Attivo</td>
+          <td data-label="Azioni">
+            <button class="btn-table">Modifica</button>
+            <button class="btn-table">Elimina</button>
+          </td>
         </tr>
         <tr>
-          <td>Mario Bianchi</td>
-          <td>mario@example.com</td>
-          <td>Utente</td>
+          <td data-label="ID">2</td>
+          <td data-label="Nome">Mario</td>
+          <td data-label="Cognome">Bianchi</td>
+          <td data-label="Email">mario@example.com</td>
+          <td data-label="Ruolo">Utente</td>
+          <td data-label="Telefono">3339876543</td>
+          <td data-label="Città">Roma</td>
+          <td data-label="Stato">Italia</td>
+          <td data-label="Registrato">2024-02-15</td>
+          <td data-label="Status">Attivo</td>
+          <td data-label="Azioni">
+            <button class="btn-table">Modifica</button>
+            <button class="btn-table">Elimina</button>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="ID">3</td>
+          <td data-label="Nome">Giulia</td>
+          <td data-label="Cognome">Verdi</td>
+          <td data-label="Email">giulia@example.com</td>
+          <td data-label="Ruolo">Editor</td>
+          <td data-label="Telefono">3335554444</td>
+          <td data-label="Città">Torino</td>
+          <td data-label="Stato">Italia</td>
+          <td data-label="Registrato">2024-03-01</td>
+          <td data-label="Status">Sospeso</td>
+          <td data-label="Azioni">
+            <button class="btn-table">Modifica</button>
+            <button class="btn-table">Elimina</button>
+          </td>
         </tr>
       </tbody>
     </table>
   </section>
+
+
+
+<h2 class="text-gradient">Titolo con gradiente oro-nero</h2>
+<!-- Select con barra di ricerca -->
+<section>
+  <h2>Select con ricerca</h2>
+  <form class="form-inline" style="max-width: 500px; margin: 0 auto;">
+    <label for="searchable-select-input">Cerca opzione:</label>
+    <input type="text" id="searchable-select-input" placeholder="Cerca...">
+    <select id="searchable-select">
+      <option value="1">Oro</option>
+      <option value="2">Nero</option>
+      <option value="3">Bianco</option>
+      <option value="4">Grigio</option>
+      <option value="5">Rosso</option>
+      <option value="golden">Golden Value</option>
+      <option value="nero-nero">Nero Nero</option>
+    </select>
+  </form>
+</section>
+
 
   <!-- PROGRESS BAR -->
 <!-- Loader con barra di caricamento -->
@@ -99,6 +166,64 @@
 <div class="loader-overlay">
   <div class="loader"></div>
 </div>
+
+
+<!-- Overlay per alert -->
+<div class="alert-overlay" id="alert-overlay"></div>
+<!-- Alert custom -->
+<div class="alert" id="custom-alert" style="display: none;">
+  <span id="alert-message">Messaggio di esempio!</span>
+  <button onclick="closeAlert()" aria-label="Chiudi">&times;</button>
+</div>
+
+<!-- Pulsante per mostrare l'alert -->
+<button type="button" onclick="showAlert('Operazione completata con successo!')" style="margin: 20px 0;">
+  Mostra Alert
+</button>
+
+<script>
+  const input = document.getElementById('searchable-select-input');
+  const select = document.getElementById('searchable-select');
+  const allOptions = Array.from(select.options);
+
+  input.addEventListener('input', function() {
+    const search = input.value.toLowerCase();
+    select.innerHTML = '';
+    allOptions.forEach(option => {
+      if (
+        option.text.toLowerCase().includes(search) ||
+        option.value.toLowerCase().includes(search)
+      ) {
+        select.appendChild(option);
+      }
+    });
+  });
+
+  // Funzione per mostrare il loader
+  function showLoader() {
+    const loaderOverlay = document.querySelector('.loader-overlay');
+    loaderOverlay.style.display = 'flex';
+    setTimeout(() => {
+      loaderOverlay.style.display = 'none';
+    }, 2000); // Nasconde il loader dopo 2 secondi
+  }
+  // Mostra il loader quando la pagina è caricata
+  window.addEventListener('load', showLoader);
+
+  // Mostra l'alert con un messaggio personalizzato
+  function showAlert(message) {
+    document.getElementById('alert-message').textContent = message;
+    document.getElementById('custom-alert').style.display = 'flex';
+    document.getElementById('alert-overlay').classList.add('active');
+  }
+  // Chiude l'alert
+  function closeAlert() {
+    document.getElementById('custom-alert').style.display = 'none';
+    document.getElementById('alert-overlay').classList.remove('active');
+  }
+  // Esempio di utilizzo:
+  // showAlert('Operazione completata con successo!');
+</script>
   
 </body>
 </html>

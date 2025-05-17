@@ -244,7 +244,57 @@
         color: var(--grigio);
     }
 
-    /* ========== SEPARATOR ========== */
+    /* ALERT IN SOVRAIMPRESSIONE AL CENTRO DELLO SCHERMO */
+    .alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10001;
+    min-width: 280px;
+    max-width: 90vw;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    padding: 24px 32px;
+    background-color: var(--nero);
+    color: var(--oro);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.1em;
+    animation: alert-pop 0.2s;
+}
+@keyframes alert-pop {
+  from { opacity: 0; transform: translate(-50%, -60%) scale(0.95);}
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1);}
+}
+.alert button {
+    background-color: transparent;
+    border: none;
+    color: var(--oro);
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 16px;
+}
+.alert button:hover {
+    color: var(--grigio);
+}
+
+/* Overlay per alert */
+.alert-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.3);
+    z-index: 10000;
+    display: none;
+}
+.alert-overlay.active {
+    display: block;
+}
+
+/* ========== SEPARATOR ========== */
     hr{
         border: none;
         height: 3px;
@@ -356,7 +406,7 @@
   }
 
 
-  @media (max-width: 900px) {
+  @media (max-width: 950px) {
     table, thead, tbody, th, td, tr {
         display: block;
         width: 100%;
@@ -420,4 +470,40 @@
         overflow-wrap: break-word;
         word-break: break-word;
     }
+    th:last-child {
+      display: none !important;
+    }
+}
+
+/* Testo con gradiente oro-nero simile all'hr */
+.text-gradient {
+  background: linear-gradient(to right, var(--nero), var(--oro), var(--nero));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+/* Classe per bottoni nelle tabelle responsive */
+.btn-table {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 1em;
+  font-family: inherit;
+  font-weight: bold;
+  color: var(--nero);
+  background: var(--oro);
+  border: 1px solid var(--nero);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  min-width: 80px; /* larghezza minima simile a una cella di testo */
+  text-align: center;
+  margin: 2px 0;
+}
+
+.btn-table:hover {
+  background: var(--nero);
+  color: var(--oro);
 }
