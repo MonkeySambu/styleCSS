@@ -24,6 +24,18 @@
     <img src="image.jpg" alt="Immagine di esempio" />
   </section>
 
+
+  <!-- From Uiverse.io by gharsh11032000 --> 
+   <label for="toggle"> toggle</label>
+<div style="display: flex; align-items: center; gap: 0.5em;">
+  <span id="switch-label-off" style="color: var(--nero); font-weight: bold;">Spento</span>
+  <label class="switch">
+    <input type="checkbox" id="toggle" name="toggle" onchange="updateSwitchLabel()" />
+    <span class="slider"></span>
+  </label>
+  <span id="switch-label-on" style="color: var(--oro); font-weight: bold;">Acceso</span>
+</div>
+
   <!-- FORM STACKED -->
   <section>
     <h2>Form Stacked</h2>
@@ -233,6 +245,14 @@
   }
   // Esempio di utilizzo:
   // showAlert('Operazione completata con successo!');
+
+    function updateSwitchLabel() {
+    const checked = document.getElementById('toggle').checked;
+    document.getElementById('switch-label-off').style.opacity = checked ? '0.5' : '1';
+    document.getElementById('switch-label-on').style.opacity = checked ? '1' : '0.5';
+  }
+  // Inizializza lo stato all'avvio
+  updateSwitchLabel();
 </script>
   
 </body>

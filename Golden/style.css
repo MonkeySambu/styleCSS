@@ -194,6 +194,31 @@
     background-color: #d4af37;
   }
   
+  /*Icone nei Bottoni */
+  .btn-icon {
+      background: none;
+      border: none;
+      padding: 0.2em;
+      margin: 0 0.2em;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .btn-icon img {
+      width: 2em;
+      height: 2em;
+      vertical-align: middle;
+      display: block;
+      pointer-events: none;
+  }
+
+  .btn-icon:hover {
+      background: rgba(191, 160, 52, 0.12); /* oro trasparente */
+  }
   
   
   /* ========== BARRA DI CARICAMENTO ========== */
@@ -544,4 +569,58 @@
     z-index: 2;
     background: #fff;
     pointer-events: auto;
+}
+
+
+/* ========== SWITCH ========== */
+
+/* Switch stile Uiverse.io adattato ai colori del tema */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Nasconde il checkbox HTML di default */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border: 2px solid var(--nero);
+  border-radius: 50px;
+  background: var(--grigio);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: var(--oro);
+  border-radius: inherit;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.switch input:checked + .slider {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  border: 2px solid var(--oro);
+  background: var(--grigioc);
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+  background-color: var(--nero);
 }
