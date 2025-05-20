@@ -195,31 +195,14 @@
   }
   
   /*Icone nei Bottoni */
-  .btn-icon {
-      background: none;
-      border: none;
-      padding: 0.2em;
-      margin: 0 0.2em;
-      cursor: pointer;
-      border-radius: 50%;
-      transition: background 0.2s;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-  }
 
-  .btn-icon img {
-      width: 2em;
-      height: 2em;
-      vertical-align: middle;
-      display: block;
-      pointer-events: none;
-  }
 
-  .btn-icon:hover {
-      background: rgba(191, 160, 52, 0.12); /* oro trasparente */
-  }
-  
+@media (max-width: 600px) {
+    .btn-icon img {
+        width: 1.2em;
+        height: 1.2em;
+    }
+}
   
   /* ========== BARRA DI CARICAMENTO ========== */
   .loader-overlay {
